@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSE App - Stevens Institute of Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">D</span>
+        <span>DSE</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#assumptions">Assumptions</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <p class="hero-label">Stevens Institute of Technology</p>
+      <h1>A Better<br><span class="accent">Gym Experience</span></h1>
+      <p class="hero-desc">Reimagining the DSE recreation platform so every Stevens student can work out without the wait.</p>
+      <div class="hero-actions">
+        <a href="#features" class="btn btn-primary">Explore Features</a>
+        <a href="#problem" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Key Assumptions</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Real-time</span>
+          <span class="stat-label">Facility Tracking</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">All</span>
+          <span class="stat-label">Students Served</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section id="problem" class="section">
+    <div class="container">
+      <p class="section-label">The Problem</p>
+      <h2>Overcrowding Hurts Everyone</h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Overcrowded Facilities</h3>
+          <p>Athletes and non-athletes alike struggle with packed gyms. Competition for machines deters students from working out entirely.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Wasted Time</h3>
+          <p>Students arrive at the gym only to find every machine taken, with no way to know ahead of time how busy the facility is.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Health Impact</h3>
+          <p>When students can't access facilities, it impacts both their physical fitness and emotional well-being during a critical time in their lives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insights -->
+  <section id="insights" class="section section-dark">
+    <div class="container">
+      <p class="section-label">Key Insights</p>
+      <h2>What Students Actually Want</h2>
+      <div class="insight-block">
+        <div class="insight-number">01</div>
+        <div class="insight-content">
+          <h3>Real-Time Visibility</h3>
+          <p>Students want the ability to see how many people are using the pool, basketball courts, gym floor, and other facilities at any given time &mdash; before they leave their dorm.</p>
+        </div>
+      </div>
+      <div class="insight-block">
+        <div class="insight-number">02</div>
+        <div class="insight-content">
+          <h3>Smarter Reservations</h3>
+          <p>A reservation counter that displays how many students have booked a time slot, so users can pick less crowded windows and plan their workouts better.</p>
+        </div>
+      </div>
+      <div class="insight-block">
+        <div class="insight-number">03</div>
+        <div class="insight-content">
+          <h3>Platform Accessibility</h3>
+          <p>More accessibility across the entire DSE platform &mdash; making it easier for every student, athlete or not, to engage with campus recreation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <p class="section-label">Proposed Features</p>
+      <h2>What We're Building</h2>
+      <div class="features-grid">
+        <div class="feature-card feature-highlight">
+          <div class="feature-badge">Core Feature</div>
+          <h3>Live Occupancy Tracker</h3>
+          <p>See real-time occupancy for every facility &mdash; gym, pool, basketball courts, and more. Data pulled directly from DSE's existing backend.</p>
+          <div class="feature-visual">
+            <div class="occupancy-bar">
+              <div class="occupancy-fill" style="width: 72%"></div>
+            </div>
+            <div class="occupancy-labels">
+              <span>Schaefer Center</span>
+              <span class="occupancy-pct">72%</span>
+            </div>
+            <div class="occupancy-bar">
+              <div class="occupancy-fill low" style="width: 35%"></div>
+            </div>
+            <div class="occupancy-labels">
+              <span>Pool</span>
+              <span class="occupancy-pct low-text">35%</span>
+            </div>
+            <div class="occupancy-bar">
+              <div class="occupancy-fill mid" style="width: 58%"></div>
+            </div>
+            <div class="occupancy-labels">
+              <span>Basketball Courts</span>
+              <span class="occupancy-pct mid-text">58%</span>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card">
+          <h3>Reservation Counter</h3>
+          <p>See how many students have booked each time slot before you reserve, so you can pick the least crowded window.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Push Notifications</h3>
+          <p>Get reminders for upcoming reservations and instant alerts when cancellations open up a spot you wanted.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Schedule Integration</h3>
+          <p>Up-to-date facility schedules maintained by DSE staff, so you always know what's open and when.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Cross-Platform</h3>
+          <p>Works on iOS 15+ and Android 10+, reaching the entire Stevens student body on the devices they already carry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Assumptions -->
+  <section id="assumptions" class="section section-dark">
+    <div class="container">
+      <p class="section-label">Validation</p>
+      <h2>Our Riskiest Assumptions</h2>
+      <p class="section-subtitle">We identified and prioritized assumptions by how critical they are to success and how much information is available to validate them.</p>
+      <div class="assumptions-table">
+        <div class="assumption-row header">
+          <span class="assumption-name">Assumption</span>
+          <span class="assumption-metric">Criticality</span>
+          <span class="assumption-metric">Info Available</span>
+        </div>
+        <div class="assumption-row high">
+          <span class="assumption-name">Real-time data can be pulled from DSE's existing backend</span>
+          <span class="assumption-metric"><span class="badge badge-high">5</span></span>
+          <span class="assumption-metric"><span class="badge badge-mid">3</span></span>
+        </div>
+        <div class="assumption-row high">
+          <span class="assumption-name">DSE staff will maintain facility schedules accurately</span>
+          <span class="assumption-metric"><span class="badge badge-high">5</span></span>
+          <span class="assumption-metric"><span class="badge badge-mid-high">4</span></span>
+        </div>
+        <div class="assumption-row">
+          <span class="assumption-name">Push notifications won't be disabled by users</span>
+          <span class="assumption-metric"><span class="badge badge-mid">3</span></span>
+          <span class="assumption-metric"><span class="badge badge-mid-high">4</span></span>
+        </div>
+        <div class="assumption-row">
+          <span class="assumption-name">Students have smartphones with iOS 15+ or Android 10+</span>
+          <span class="assumption-metric"><span class="badge badge-low">1</span></span>
+          <span class="assumption-metric"><span class="badge badge-high">5</span></span>
+        </div>
+        <div class="assumption-row">
+          <span class="assumption-name">Grade-based occupancy indicator is useful</span>
+          <span class="assumption-metric"><span class="badge badge-low">1</span></span>
+          <span class="assumption-metric"><span class="badge badge-mid">3</span></span>
+        </div>
+      </div>
+      <div class="test-card">
+        <h3>What We're Testing First</h3>
+        <p>Whether reservation booking data can be implemented into a live counter that displays how many students have booked a given time slot &mdash; validating our most critical, least-known assumption.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="section">
+    <div class="container center">
+      <p class="section-label">The Team</p>
+      <h2>Built by Stevens Students</h2>
+      <p class="section-subtitle">A project by Stevens Institute of Technology students working to improve campus recreation for everyone.</p>
+      <div class="cta-block">
+        <a href="https://stevens.dserec.com" class="btn btn-primary" target="_blank" rel="noopener">Visit DSE Portal</a>
+        <a href="https://stevensrec.com" class="btn btn-outline" target="_blank" rel="noopener">Stevens Recreation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">D</span>
+          <span>DSE</span>
+        </a>
+        <p>Improving campus recreation at Stevens Institute of Technology.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#problem">Problem</a>
+        <a href="#insights">Insights</a>
+        <a href="#features">Features</a>
+        <a href="#assumptions">Assumptions</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 DSE App &middot; Stevens Institute of Technology</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
