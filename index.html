@@ -3,253 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DSE App - Stevens Institute of Technology</title>
+  <title>Stevens DSE - Campus Recreation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-icon">D</span>
-        <span>DSE</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#problem">Problem</a></li>
-        <li><a href="#insights">Insights</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#assumptions">Assumptions</a></li>
-        <li><a href="#team">Team</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <p class="hero-label">Stevens Institute of Technology</p>
-      <h1>A Better<br><span class="accent">Gym Experience</span></h1>
-      <p class="hero-desc">Reimagining the DSE recreation platform so every Stevens student can work out without the wait.</p>
-      <div class="hero-actions">
-        <a href="#features" class="btn btn-primary">Explore Features</a>
-        <a href="#problem" class="btn btn-outline">Learn More</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="stevens-logo">
+          <svg viewBox="0 0 40 48" width="40" height="48">
+            <path d="M20 0C12 0 6 3 6 3v45s6-3 14-3 14 3 14 3V3s-6-3-14-3z" fill="#A32638"/>
+            <text x="20" y="32" text-anchor="middle" fill="white" font-size="24" font-weight="700" font-family="Georgia, serif">S</text>
+          </svg>
+        </div>
+        <span class="header-title">Stevens Institute of Technology</span>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">5</span>
-          <span class="stat-label">Key Assumptions</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">Real-time</span>
-          <span class="stat-label">Facility Tracking</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">All</span>
-          <span class="stat-label">Students Served</span>
-        </div>
+      <div class="header-actions">
+        <button class="btn-login">Log in</button>
+        <button class="btn-menu" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Problem -->
-  <section id="problem" class="section">
-    <div class="container">
-      <p class="section-label">The Problem</p>
-      <h2>Overcrowding Hurts Everyone</h2>
-      <div class="problem-grid">
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="reserve">Make Reservation</button>
+      <button class="tab" data-tab="my-reservations">My Reservations</button>
+      <button class="tab" data-tab="occupancy">Live Occupancy</button>
+    </div>
+
+    <!-- Tab: Make Reservation -->
+    <div class="tab-content active" id="tab-reserve">
+      <div class="reservation-panel">
+        <div class="reservation-steps">
+          <!-- Step 1 -->
+          <div class="step-section">
+            <div class="step-header">
+              <span class="step-number active">1</span>
+              <span class="step-title">Select space to reserve</span>
+            </div>
+            <div class="space-list" id="space-list">
+              <button class="space-item" data-space="pool">
+                <span>Pool</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+              <button class="space-item" data-space="schaefer">
+                <span>Schaefer Fitness Center</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+              <button class="space-item" data-space="ucc-fitness">
+                <span>UCC Fitness Center</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+              <button class="space-item" data-space="ucc-north">
+                <span>UCC North Tennis Court</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+              <button class="space-item" data-space="ucc-south">
+                <span>UCC South Tennis Court</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+              <button class="space-item" data-space="varsity">
+                <span>Varsity Weight Room (Athletes Only)</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
           </div>
-          <h3>Overcrowded Facilities</h3>
-          <p>Athletes and non-athletes alike struggle with packed gyms. Competition for machines deters students from working out entirely.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3>Wasted Time</h3>
-          <p>Students arrive at the gym only to find every machine taken, with no way to know ahead of time how busy the facility is.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3>Health Impact</h3>
-          <p>When students can't access facilities, it impacts both their physical fitness and emotional well-being during a critical time in their lives.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Insights -->
-  <section id="insights" class="section section-dark">
-    <div class="container">
-      <p class="section-label">Key Insights</p>
-      <h2>What Students Actually Want</h2>
-      <div class="insight-block">
-        <div class="insight-number">01</div>
-        <div class="insight-content">
-          <h3>Real-Time Visibility</h3>
-          <p>Students want the ability to see how many people are using the pool, basketball courts, gym floor, and other facilities at any given time &mdash; before they leave their dorm.</p>
-        </div>
-      </div>
-      <div class="insight-block">
-        <div class="insight-number">02</div>
-        <div class="insight-content">
-          <h3>Smarter Reservations</h3>
-          <p>A reservation counter that displays how many students have booked a time slot, so users can pick less crowded windows and plan their workouts better.</p>
-        </div>
-      </div>
-      <div class="insight-block">
-        <div class="insight-number">03</div>
-        <div class="insight-content">
-          <h3>Platform Accessibility</h3>
-          <p>More accessibility across the entire DSE platform &mdash; making it easier for every student, athlete or not, to engage with campus recreation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section id="features" class="section">
-    <div class="container">
-      <p class="section-label">Proposed Features</p>
-      <h2>What We're Building</h2>
-      <div class="features-grid">
-        <div class="feature-card feature-highlight">
-          <div class="feature-badge">Core Feature</div>
-          <h3>Live Occupancy Tracker</h3>
-          <p>See real-time occupancy for every facility &mdash; gym, pool, basketball courts, and more. Data pulled directly from DSE's existing backend.</p>
-          <div class="feature-visual">
-            <div class="occupancy-bar">
-              <div class="occupancy-fill" style="width: 72%"></div>
+          <!-- Step 2 -->
+          <div class="step-section step-timeslot">
+            <div class="step-header">
+              <span class="step-number">2</span>
+              <span class="step-title">Select timeslot to reserve</span>
             </div>
-            <div class="occupancy-labels">
-              <span>Schaefer Center</span>
-              <span class="occupancy-pct">72%</span>
-            </div>
-            <div class="occupancy-bar">
-              <div class="occupancy-fill low" style="width: 35%"></div>
-            </div>
-            <div class="occupancy-labels">
-              <span>Pool</span>
-              <span class="occupancy-pct low-text">35%</span>
-            </div>
-            <div class="occupancy-bar">
-              <div class="occupancy-fill mid" style="width: 58%"></div>
-            </div>
-            <div class="occupancy-labels">
-              <span>Basketball Courts</span>
-              <span class="occupancy-pct mid-text">58%</span>
+            <div class="timeslot-area" id="timeslot-area">
+              <p class="timeslot-placeholder">To view available timeslots please select a space to reserve</p>
+              <div class="timeslot-content hidden" id="timeslot-content">
+                <div class="timeslot-date-picker">
+                  <button class="date-nav" id="date-prev">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                  </button>
+                  <span class="date-display" id="date-display"></span>
+                  <button class="date-nav" id="date-next">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                </div>
+                <div class="timeslot-grid" id="timeslot-grid"></div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="feature-card">
-          <h3>Reservation Counter</h3>
-          <p>See how many students have booked each time slot before you reserve, so you can pick the least crowded window.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Push Notifications</h3>
-          <p>Get reminders for upcoming reservations and instant alerts when cancellations open up a spot you wanted.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Schedule Integration</h3>
-          <p>Up-to-date facility schedules maintained by DSE staff, so you always know what's open and when.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Cross-Platform</h3>
-          <p>Works on iOS 15+ and Android 10+, reaching the entire Stevens student body on the devices they already carry.</p>
-        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Assumptions -->
-  <section id="assumptions" class="section section-dark">
-    <div class="container">
-      <p class="section-label">Validation</p>
-      <h2>Our Riskiest Assumptions</h2>
-      <p class="section-subtitle">We identified and prioritized assumptions by how critical they are to success and how much information is available to validate them.</p>
-      <div class="assumptions-table">
-        <div class="assumption-row header">
-          <span class="assumption-name">Assumption</span>
-          <span class="assumption-metric">Criticality</span>
-          <span class="assumption-metric">Info Available</span>
+    <!-- Tab: My Reservations -->
+    <div class="tab-content" id="tab-my-reservations">
+      <div class="reservation-panel">
+        <div class="empty-state">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <h3>No upcoming reservations</h3>
+          <p>Your reserved timeslots will appear here. Make a reservation to get started.</p>
         </div>
-        <div class="assumption-row high">
-          <span class="assumption-name">Real-time data can be pulled from DSE's existing backend</span>
-          <span class="assumption-metric"><span class="badge badge-high">5</span></span>
-          <span class="assumption-metric"><span class="badge badge-mid">3</span></span>
-        </div>
-        <div class="assumption-row high">
-          <span class="assumption-name">DSE staff will maintain facility schedules accurately</span>
-          <span class="assumption-metric"><span class="badge badge-high">5</span></span>
-          <span class="assumption-metric"><span class="badge badge-mid-high">4</span></span>
-        </div>
-        <div class="assumption-row">
-          <span class="assumption-name">Push notifications won't be disabled by users</span>
-          <span class="assumption-metric"><span class="badge badge-mid">3</span></span>
-          <span class="assumption-metric"><span class="badge badge-mid-high">4</span></span>
-        </div>
-        <div class="assumption-row">
-          <span class="assumption-name">Students have smartphones with iOS 15+ or Android 10+</span>
-          <span class="assumption-metric"><span class="badge badge-low">1</span></span>
-          <span class="assumption-metric"><span class="badge badge-high">5</span></span>
-        </div>
-        <div class="assumption-row">
-          <span class="assumption-name">Grade-based occupancy indicator is useful</span>
-          <span class="assumption-metric"><span class="badge badge-low">1</span></span>
-          <span class="assumption-metric"><span class="badge badge-mid">3</span></span>
-        </div>
-      </div>
-      <div class="test-card">
-        <h3>What We're Testing First</h3>
-        <p>Whether reservation booking data can be implemented into a live counter that displays how many students have booked a given time slot &mdash; validating our most critical, least-known assumption.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Team -->
-  <section id="team" class="section">
-    <div class="container center">
-      <p class="section-label">The Team</p>
-      <h2>Built by Stevens Students</h2>
-      <p class="section-subtitle">A project by Stevens Institute of Technology students working to improve campus recreation for everyone.</p>
-      <div class="cta-block">
-        <a href="https://stevens.dserec.com" class="btn btn-primary" target="_blank" rel="noopener">Visit DSE Portal</a>
-        <a href="https://stevensrec.com" class="btn btn-outline" target="_blank" rel="noopener">Stevens Recreation</a>
+    <!-- Tab: Live Occupancy -->
+    <div class="tab-content" id="tab-occupancy">
+      <div class="reservation-panel">
+        <div class="occupancy-header">
+          <h3>Live Facility Occupancy</h3>
+          <p>Real-time capacity data across all recreation facilities.</p>
+          <span class="live-badge">
+            <span class="live-dot"></span>
+            Live
+          </span>
+        </div>
+        <div class="occupancy-grid">
+          <div class="occupancy-card">
+            <div class="occ-info">
+              <h4>Schaefer Fitness Center</h4>
+              <p class="occ-count">47 / 65 people</p>
+            </div>
+            <div class="occ-bar-wrap">
+              <div class="occ-bar" style="--pct: 72%">
+                <div class="occ-fill high"></div>
+              </div>
+              <span class="occ-pct high-text">72%</span>
+            </div>
+            <span class="occ-status busy">Busy</span>
+          </div>
+          <div class="occupancy-card">
+            <div class="occ-info">
+              <h4>Pool</h4>
+              <p class="occ-count">14 / 40 people</p>
+            </div>
+            <div class="occ-bar-wrap">
+              <div class="occ-bar" style="--pct: 35%">
+                <div class="occ-fill low"></div>
+              </div>
+              <span class="occ-pct low-text">35%</span>
+            </div>
+            <span class="occ-status quiet">Quiet</span>
+          </div>
+          <div class="occupancy-card">
+            <div class="occ-info">
+              <h4>UCC Fitness Center</h4>
+              <p class="occ-count">29 / 50 people</p>
+            </div>
+            <div class="occ-bar-wrap">
+              <div class="occ-bar" style="--pct: 58%">
+                <div class="occ-fill mid"></div>
+              </div>
+              <span class="occ-pct mid-text">58%</span>
+            </div>
+            <span class="occ-status moderate">Moderate</span>
+          </div>
+          <div class="occupancy-card">
+            <div class="occ-info">
+              <h4>UCC North Tennis Court</h4>
+              <p class="occ-count">2 / 8 people</p>
+            </div>
+            <div class="occ-bar-wrap">
+              <div class="occ-bar" style="--pct: 25%">
+                <div class="occ-fill low"></div>
+              </div>
+              <span class="occ-pct low-text">25%</span>
+            </div>
+            <span class="occ-status quiet">Quiet</span>
+          </div>
+          <div class="occupancy-card">
+            <div class="occ-info">
+              <h4>UCC South Tennis Court</h4>
+              <p class="occ-count">0 / 8 people</p>
+            </div>
+            <div class="occ-bar-wrap">
+              <div class="occ-bar" style="--pct: 0%">
+                <div class="occ-fill low"></div>
+              </div>
+              <span class="occ-pct low-text">0%</span>
+            </div>
+            <span class="occ-status empty">Empty</span>
+          </div>
+          <div class="occupancy-card">
+            <div class="occ-info">
+              <h4>Varsity Weight Room</h4>
+              <p class="occ-count">18 / 20 people</p>
+            </div>
+            <div class="occ-bar-wrap">
+              <div class="occ-bar" style="--pct: 90%">
+                <div class="occ-fill critical"></div>
+              </div>
+              <span class="occ-pct critical-text">90%</span>
+            </div>
+            <span class="occ-status full">Near Full</span>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="#" class="logo">
-          <span class="logo-icon">D</span>
-          <span>DSE</span>
-        </a>
-        <p>Improving campus recreation at Stevens Institute of Technology.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#problem">Problem</a>
-        <a href="#insights">Insights</a>
-        <a href="#features">Features</a>
-        <a href="#assumptions">Assumptions</a>
+    <div class="footer-left">
+      <a href="https://www.instagram.com/stevenscampusrec/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <div class="accessibility-toggle">
+        <span>Accessibility mode</span>
+        <label class="toggle-switch">
+          <input type="checkbox">
+          <span class="toggle-slider"></span>
+        </label>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 DSE App &middot; Stevens Institute of Technology</p>
+    <div class="footer-right">
+      <a href="https://www.dserec.com/about-us" target="_blank" rel="noopener">About us</a>
+      <span>&copy; 2026 DSE Rec LLC. All rights reserved.</span>
     </div>
   </footer>
 
